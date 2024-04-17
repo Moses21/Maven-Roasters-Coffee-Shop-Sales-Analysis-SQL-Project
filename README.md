@@ -16,8 +16,7 @@ The initial step involves performing data cleaning on the dataset. Surprisingly 
    ```
 3. Creating a table.
    ```
-   CREATE TABLE IF NOT EXISTS sales
-(
+   CREATE TABLE IF NOT EXISTS sales(
     transaction_id INT NOT NULL,
     transaction_date DATE NOT NULL,
     transaction_time TIME NOT NULL,
@@ -29,7 +28,6 @@ The initial step involves performing data cleaning on the dataset. Surprisingly 
     product_category VARCHAR(20) NOT NULL,
     product_type VARCHAR(50) NOT NULL,
     product_detail VARCHAR(50) NOT NULL
-)
-
+   )
    ```
 
