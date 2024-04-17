@@ -30,7 +30,7 @@ The initial step involves performing data cleaning on the dataset. Surprisingly 
     product_detail VARCHAR(50) NOT NULL
    )
    ```
-3. Data Importation from CSV
+3. Data Importation from CSV <br/>
    After creating a database and table, now it’s time to import data from a CSV file. For this select and right-click on the table sales and a new window open then I select the path from 
    the local machine where I stored the dataset
 
