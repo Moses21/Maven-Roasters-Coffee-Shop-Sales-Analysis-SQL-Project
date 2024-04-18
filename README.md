@@ -70,19 +70,19 @@ The initial step involves performing data cleaning on the dataset. Surprisingly 
       	month_name = TO_CHAR(transaction_date::DATE,'Mon');
      ```
 
-   `Day of week`
+     `Day of week`
    
-   ```
-   SELECT 
-      	TO_CHAR(transaction_date::DATE,'Dy') AS day_of_week 
-   FROM sales;
-      
-   ALTER TABLE 
-      	sales 
-   ADD COLUMN 
-      	day_of_week VARCHAR(10);
-   UPDATE
-      	sales
-   SET
-      	day_of_week = TO_CHAR(transaction_date::DATE,'Dy');
-```
+     ```
+     SELECT 
+        TO_CHAR(transaction_date::DATE,'Dy') AS day_of_week 
+     FROM sales;
+         
+     ALTER TABLE 
+        sales 
+     ADD COLUMN 
+        day_of_week VARCHAR(10);
+     UPDATE
+        sales
+     SET
+        day_of_week = TO_CHAR(transaction_date::DATE,'Dy');
+     ```
