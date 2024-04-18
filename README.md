@@ -87,28 +87,29 @@ The initial step involves performing data cleaning on the dataset. Surprisingly 
         day_of_week = TO_CHAR(transaction_date::DATE,'Dy');
      ```
    - Add a new column to extract Hour from the transaction time
-     ```
-     SELECT EXTRACT(HOUR FROM transaction_time) AS sales_hour FROM sales;
-     ALTER TABLE sales ADD COLUMN sales_hour INT;
-     UPDATE sales SET sales_hour = EXTRACT(HOUR FROM transaction_time);
+    
+   ```sql
+    SELECT EXTRACT(HOUR FROM transaction_time) AS sales_hour FROM sales;
+    ALTER TABLE sales ADD COLUMN sales_hour INT;
+    UPDATE sales SET sales_hour = EXTRACT(HOUR FROM transaction_time);
       
-     SELECT 
-          CASE 
-      		WHEN EXTRACT(HOUR FROM transaction_time) < 12 THEN 'Morning'
-      		WHEN EXTRACT(HOUR FROM transaction_time) < 17 THEN 'Afternoon'
+   SELECT 
+      CASE 
+         WHEN EXTRACT(HOUR FROM transaction_time) < 12 THEN 'Morning'
+         WHEN EXTRACT(HOUR FROM transaction_time) < 17 THEN 'Afternoon'
               ELSE  'Evening' 
-          END AS hours_of_day
-     FROM sales;
+      END AS hours_of_day
+   FROM sales;
       
-     ALTER TABLE sales ADD COLUMN hours_of_day VARCHAR(20);
+   ALTER TABLE sales ADD COLUMN hours_of_day VARCHAR(20);
       
-     UPDATE sales SET hours_of_day = (
-        CASE 
-      		WHEN EXTRACT(HOUR FROM transaction_time) < 12 THEN 'Morning'
-      		WHEN EXTRACT(HOUR FROM transaction_time) < 17 THEN 'Afternoon'
+   UPDATE sales SET hours_of_day = (
+      CASE 
+         WHEN EXTRACT(HOUR FROM transaction_time) < 12 THEN 'Morning'
+         WHEN EXTRACT(HOUR FROM transaction_time) < 17 THEN 'Afternoon'
               ELSE  'Evening' 
-        END);
-    ```
+      END);
+   ```
 ## Exploratory Data Analysis
 Exploratory data analysis is done to answer the listed questions and aims of this project.
 
