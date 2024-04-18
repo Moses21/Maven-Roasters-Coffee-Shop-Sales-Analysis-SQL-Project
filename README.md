@@ -35,7 +35,7 @@ The initial step involves performing data cleaning on the dataset. Surprisingly 
 3. ### Data Importation from CSV <br/>
    After creating a database and table, now it’s time to import data from a CSV file. For this select and right-click on the table sales and a new window open then I select the path 
    from the local machine where I stored the dataset.
-   ![](import.png)
+   ![](import.PNG)
 
 5. ### Data Transformation
    - Add a new column named Revenue. This column will help us to know how much revenue Maven Roasters made during this six month
@@ -114,7 +114,7 @@ The initial step involves performing data cleaning on the dataset. Surprisingly 
       END);
    ```
 ### An updated dataset with revenue, month_name, day_of_week, sales_hour and hours_of_day
-![](tempsnip.PNG)
+![](tempsnip.png)
 
 ## Exploratory Data Analysis
 Exploratory data analysis is done to answer the listed questions and aims of this project.
