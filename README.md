@@ -120,4 +120,23 @@ Exploratory data analysis is done to answer the listed questions and aims of thi
        FROM sales;
       ```
    ![](num_stores.PNG)
+
+2. How many unique product category does the data have?
+      ```sql
+      SELECT
+          COUNT(DISTINCT product_category)
+      FROM sales;
+      ```
+   ![](num_products.PNG)
+   
+4. What is the store location with the largest and lowest revenue?
+      ```sql
+      SELECT 
+      	store_location,
+      	SUM(revenue) total_revenue
+      FROM sales
+      GROUP BY store_location
+      ORDER BY total_revenue DESC;
+   ```
+   ![](revenue by store.PNG)
    
