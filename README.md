@@ -1,6 +1,6 @@
 # Maven-Roasters-Analysis-SQL-Project
 ![](nathan-dumlao-6VhPY27jdps-unsplash.jpg)
-Photo by [Nathan Dumlao](https://unsplash.com/photos/three-person-holding-beverage-cups-6VhPY27jdps)
+Photo by [Nathan Dumlao](https://unsplash.com/photos/three-person-holding-beverage-cups-6VhPY27jdps) from (https://unsplash.com)
 
 ## Introduction
 Maven Roasters is a coffee shop with three locations in New York City namely Lower Manhattan, Hell's Kitchen and Astoria. Maven Roasters aims to understand and optimize the performance of the coffee shop by analyzing various aspects of sales data, such as daily and monthly sales trends, popular products, peak hours, customer demographics, and behaviour.
