@@ -50,3 +50,5 @@ The initial step involves performing data cleaning on the dataset. Surprisingly 
       	revenue = transaction_qty *unit_price;
      ```
 
+   - Add new columns to calculate Month and Day of Week based on the transaction date and I named these columns month_name and day_of_week. (BONUS: display them as text (i.e. “Jan”, “Feb”, “Sun”, “Mon”).
+
