@@ -35,8 +35,9 @@ The initial step involves performing data cleaning on the dataset. Surprisingly 
 3. ### Data Importation from CSV <br/>
    After creating a database and table, now it’s time to import data from a CSV file. For this select and right-click on the table sales and a new window open then I select the path 
    from the local machine where I stored the dataset.
+   ![](import.PNG)
 
-4. ### Data Transformation
+5. ### Data Transformation
    - Add a new column named Revenue. This column will help us to know how much revenue Maven Roasters made during this six month
 
    ```sql
