@@ -113,7 +113,7 @@ The initial step involves performing data cleaning on the dataset. Surprisingly 
               ELSE  'Evening' 
       END);
    ```
-### An updated dataset with revenue, month_name, day_of_week, sales_hour and hours_of_day
+_An updated dataset with revenue, month_name, day_of_week, sales_hour and hours_of_day_
 ![](tempsnip.png)
 
 ## Exploratory Data Analysis
