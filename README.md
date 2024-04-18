@@ -174,14 +174,5 @@ Exploratory data analysis is done to answer the listed questions and aims of thi
 ```
 ![](downumsales.PNG)
 
-7. Which time of the day do customers visits the stores.
-   ```sql
-    SELECT 
-      hours_of_day,
-      COUNT(transaction_id) AS total_orders
-    FROM sales
-    GROUP BY hours_of_day
-    ORDER BY total_orders DESC;
-  ```
 ![](orderbytimeoftime.PNG)
    
