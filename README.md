@@ -38,9 +38,7 @@ The initial step involves performing data cleaning on the dataset. Surprisingly 
    - Add a new column named Revenue. This column will help us to know how much revenue Maven Roasters made during this six month
 
      ```
-      SELECT 
-      	(transaction_qty *unit_price) AS revenue 
-      FROM sales;
+      SELECT  (transaction_qty *unit_price) AS revenue FROM sales;
       
       ALTER TABLE 
       	sales
