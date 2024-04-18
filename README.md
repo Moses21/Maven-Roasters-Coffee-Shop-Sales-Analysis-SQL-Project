@@ -11,7 +11,7 @@ The dataset used is fictional and sourced from Maven Analytics. It contains orde
 The initial step involves performing data cleaning on the dataset. Surprisingly there are no duplicated transaction records in the dataset.
 
 1. Creating a database.
-   ```
+   ```sql
    CREATE DATABASE IF NOT EXISTS maven_roasters;
    ```
 3. Creating a table.
@@ -31,49 +31,48 @@ The initial step involves performing data cleaning on the dataset. Surprisingly 
    )
    ```
 3. ### Data Importation from CSV <br/>
-   After creating a database and table, now it’s time to import data from a CSV file. For this select and right-click on the table sales and a new window open then I select the path from 
-   the local machine where I stored the dataset.
+   After creating a database and table, now it’s time to import data from a CSV file. For this select and right-click on the table sales and a new window open then I select the path 
+   from the local machine where I stored the dataset.
 
 4. ### Data Transformation
    - Add a new column named Revenue. This column will help us to know how much revenue Maven Roasters made during this six month
 
-     ```
-     SQL
-      SELECT  (transaction_qty *unit_price) AS revenue FROM sales;
+   ```sql
+    SELECT  (transaction_qty *unit_price) AS revenue FROM sales;
       
-      ALTER TABLE 
-      	sales
-      ADD COLUMN revenue DECIMAL;
+    ALTER TABLE 
+      sales
+    ADD COLUMN revenue DECIMAL;
       
-      UPDATE 
-      	sales 
-      SET 
-      	revenue = transaction_qty *unit_price;
+    UPDATE 
+      sales 
+    SET 
+      revenue = transaction_qty *unit_price;
      ```
 
    - Add new columns to calculate Month and Day of Week based on the transaction date and I named these columns month_name and day_of_week. *(BONUS: display them as text (i.e. “Jan”, “Feb”, “Sun”, “Mon”)*.
   
-     `Month`
+   `Month`
 
-     ```
-     SELECT 
-      	TO_CHAR(transaction_date::DATE,'Mon') AS month_name 
-      FROM sales;
+   ```sql
+    SELECT 
+      TO_CHAR(transaction_date::DATE,'Mon') AS month_name 
+    FROM sales;
       
-      ALTER TABLE 
-      	sales 
-      ADD COLUMN
-      	month_name VARCHAR(10);
+    ALTER TABLE 
+       sales 
+    ADD COLUMN
+       month_name VARCHAR(10);
       	
-      UPDATE 
-      	sales
-      SET
-      	month_name = TO_CHAR(transaction_date::DATE,'Mon');
+    UPDATE 
+      sales
+    SET
+      month_name = TO_CHAR(transaction_date::DATE,'Mon');
      ```
 
-     `Day of week`
+   `Day of week`
    
-     ```
+     ```sql
      SELECT 
         TO_CHAR(transaction_date::DATE,'Dy') AS day_of_week 
      FROM sales;
