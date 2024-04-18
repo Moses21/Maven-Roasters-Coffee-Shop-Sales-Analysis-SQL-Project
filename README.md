@@ -174,5 +174,8 @@ Exploratory data analysis is done to answer the listed questions and aims of thi
 ```
 ![](downumsales.PNG)
 
+7. Which time of the day do customers visits the stores.
+   ```sql
+   ```
 ![](orderbytimeoftime.PNG)
    
