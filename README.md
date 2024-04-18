@@ -163,8 +163,8 @@ Exploratory data analysis is done to answer the listed questions and aims of thi
    ```   
 ![](monthbyrevenue.PNG)
    
-6. On which day ie day name of the week has more sales and which one has less? Any suggestions to improve for those on fewer sales days?
-```
+6. On which day ie day name of the week has more sales and which one has less Any suggestions to improve for those on fewer sales days?.
+```sql
    SELECT
        day_of_week,
        COUNT(transaction_id) AS num_sales
@@ -173,6 +173,7 @@ Exploratory data analysis is done to answer the listed questions and aims of thi
    ORDER BY num_sales DESC;
 ```
 ![](downumsales.PNG)
+
 7. Which time of the day do customers visits the stores.
    ```sql
     SELECT 
