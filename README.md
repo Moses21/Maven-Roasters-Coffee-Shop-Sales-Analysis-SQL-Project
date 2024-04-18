@@ -113,6 +113,9 @@ The initial step involves performing data cleaning on the dataset. Surprisingly 
               ELSE  'Evening' 
       END);
    ```
+### An updated dataset with revenue, month_name, day_of_week, sales_hour and hours_of_day
+![](tempsnip.PNG)
+
 ## Exploratory Data Analysis
 Exploratory data analysis is done to answer the listed questions and aims of this project.
 
