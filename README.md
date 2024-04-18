@@ -129,14 +129,60 @@ Exploratory data analysis is done to answer the listed questions and aims of thi
       ```
    ![](num_products.PNG)
    
-4. What is the store location with the largest and lowest revenue?
+3. What is the store location with the largest and lowest revenue?
       ```sql
       SELECT 
-      	store_location,
+         store_location,
       	SUM(revenue) total_revenue
       FROM sales
       GROUP BY store_location
       ORDER BY total_revenue DESC;
    ```
    ![](revenuebystore.PNG)
+
+4. Which product category has been selling more and which one is selling less in terms of revenue?
+      ```sql
+      SELECT 
+          product_category,
+          ROUND(SUM(revenue),2) AS total_amount 
+      FROM coffee_sales
+      GROUP BY product_category
+      ORDER BY total_amount  DESC;
+      ```
+   ![](categorybyrev.PNG)
+   
+5. What is the number of transactions that are happening each month and their total bill amount?
+   ```sql
+   SELECT
+       month_name,
+       COUNT(*) AS num_transaction,
+       ROUND(SUM(revenue),2) AS total_amount
+   FROM sales
+   GROUP BY month_name
+   ORDER BY total_amount DESC;
+   ``
+   
+![](monthbyrevenue.PNG)
+   
+6. On which day ie day name of the week has more sales and which one has less? Any suggestions to improve for those on fewer sales days?
+```
+SELECT
+    day_of_week,
+    COUNT(transaction_id) AS num_sales
+FROM sales
+GROUP BY day_of_week
+ORDER BY num_sales DESC;
+```
+![](downumsales.PNG)
+
+7. Which time of the day do customers visits the stores.
+   ```sql
+      SELECT 
+      	hours_of_day,
+      	COUNT(transaction_id) AS total_orders
+      FROM sales
+      GROUP BY hours_of_day
+      ORDER BY total_orders DESC;
+  ```
+![](orderbytimeoftime.PNG)
    
