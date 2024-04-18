@@ -160,8 +160,7 @@ Exploratory data analysis is done to answer the listed questions and aims of thi
    FROM sales
    GROUP BY month_name
    ORDER BY total_amount DESC;
-   ``
-   
+   ```   
 ![](monthbyrevenue.PNG)
    
 6. On which day ie day name of the week has more sales and which one has less? Any suggestions to improve for those on fewer sales days?
