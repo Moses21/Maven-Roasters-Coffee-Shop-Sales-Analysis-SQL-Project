@@ -138,5 +138,5 @@ Exploratory data analysis is done to answer the listed questions and aims of thi
       GROUP BY store_location
       ORDER BY total_revenue DESC;
    ```
-   ![](revenue by store.PNG)
+   ![](revenuebystore.PNG)
    
