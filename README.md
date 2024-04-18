@@ -15,7 +15,7 @@ The initial step involves performing data cleaning on the dataset. Surprisingly 
    CREATE DATABASE IF NOT EXISTS maven_roasters;
    ```
 3. Creating a table.
-   ```
+   ```sql
    CREATE TABLE IF NOT EXISTS sales(
     transaction_id INT NOT NULL,
     transaction_date DATE NOT NULL,
@@ -38,6 +38,7 @@ The initial step involves performing data cleaning on the dataset. Surprisingly 
    - Add a new column named Revenue. This column will help us to know how much revenue Maven Roasters made during this six month
 
      ```
+     SQL
       SELECT  (transaction_qty *unit_price) AS revenue FROM sales;
       
       ALTER TABLE 
