@@ -109,9 +109,9 @@ The initial step involves performing data cleaning on the dataset. Surprisingly 
               ELSE  'Evening' 
         END);
     ```
-
-    ## Exploratory Data Analysis
-    Exploratory data analysis is done to answer the listed questions and aims of this project.
+    
+## Exploratory Data Analysis
+Exploratory data analysis is done to answer the listed questions and aims of this project.
 
     1. How many unique stores location does the data have?
       ```
