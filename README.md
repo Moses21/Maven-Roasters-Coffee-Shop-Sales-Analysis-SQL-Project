@@ -51,4 +51,38 @@ The initial step involves performing data cleaning on the dataset. Surprisingly 
      ```
 
    - Add new columns to calculate Month and Day of Week based on the transaction date and I named these columns month_name and day_of_week. *(BONUS: display them as text (i.e. “Jan”, “Feb”, “Sun”, “Mon”)*.
+  
+     `Month`
 
+     ```
+     SELECT 
+      	TO_CHAR(transaction_date::DATE,'Mon') AS month_name 
+      FROM sales;
+      
+      ALTER TABLE 
+      	sales 
+      ADD COLUMN
+      	month_name VARCHAR(10);
+      	
+      UPDATE 
+      	sales
+      SET
+      	month_name = TO_CHAR(transaction_date::DATE,'Mon');
+     ```
+
+   `Day of week`
+   
+   ```
+   SELECT 
+      	TO_CHAR(transaction_date::DATE,'Dy') AS day_of_week 
+   FROM sales;
+      
+   ALTER TABLE 
+      	sales 
+   ADD COLUMN 
+      	day_of_week VARCHAR(10);
+   UPDATE
+      	sales
+   SET
+      	day_of_week = TO_CHAR(transaction_date::DATE,'Dy');
+```
