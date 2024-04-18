@@ -108,4 +108,14 @@ The initial step involves performing data cleaning on the dataset. Surprisingly 
       		WHEN EXTRACT(HOUR FROM transaction_time) < 17 THEN 'Afternoon'
               ELSE  'Evening' 
         END);
-   ```
+    ```
+
+    ## Exploratory Data Analysis
+    Exploratory data analysis is done to answer the listed questions and aims of this project.
+
+    1. How many unique stores location does the data have?
+      ```
+       SELECT
+         COUNT(DISTINCT store_location)
+       FROM sales;
+      ```
