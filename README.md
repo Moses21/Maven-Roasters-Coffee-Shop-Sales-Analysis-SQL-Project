@@ -119,4 +119,5 @@ Exploratory data analysis is done to answer the listed questions and aims of thi
          COUNT(DISTINCT store_location)
        FROM sales;
       ```
+   ![](num_stores.PNG)
    
