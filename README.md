@@ -166,23 +166,22 @@ Exploratory data analysis is done to answer the listed questions and aims of thi
    
 6. On which day ie day name of the week has more sales and which one has less? Any suggestions to improve for those on fewer sales days?
 ```
-SELECT
-    day_of_week,
-    COUNT(transaction_id) AS num_sales
-FROM sales
-GROUP BY day_of_week
-ORDER BY num_sales DESC;
+   SELECT
+       day_of_week,
+       COUNT(transaction_id) AS num_sales
+   FROM sales
+   GROUP BY day_of_week
+   ORDER BY num_sales DESC;
 ```
 ![](downumsales.PNG)
-
 7. Which time of the day do customers visits the stores.
    ```sql
-      SELECT 
-      	hours_of_day,
-      	COUNT(transaction_id) AS total_orders
-      FROM sales
-      GROUP BY hours_of_day
-      ORDER BY total_orders DESC;
+    SELECT 
+      hours_of_day,
+      COUNT(transaction_id) AS total_orders
+    FROM sales
+    GROUP BY hours_of_day
+    ORDER BY total_orders DESC;
   ```
 ![](orderbytimeoftime.PNG)
    
