@@ -35,4 +35,5 @@ The initial step involves performing data cleaning on the dataset. Surprisingly 
    the local machine where I stored the dataset.
 
 4. ### Data Transformation
+   -- 	Add a new column named Revenue. This column will help us to know how much revenue Maven Roasters made during this six month
 
