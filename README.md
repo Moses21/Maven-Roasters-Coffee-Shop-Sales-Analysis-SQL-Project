@@ -112,7 +112,7 @@ The initial step involves performing data cleaning on the dataset. Surprisingly 
 ## Exploratory Data Analysis
 Exploratory data analysis is done to answer the listed questions and aims of this project.
 
-    1. How many unique stores location does the data have?
+1. How many unique stores location does the data have?
       ```
        SELECT
          COUNT(DISTINCT store_location)
